@@ -1,0 +1,39 @@
+FIFO DEPTH CALCULATION
+
+Given: Sender clock frequency = 500MHz
+Write idle cycles = 3
+Write burst size = 1024
+Receiver clock frequency = 225MHz
+Read Idle cycles = 2
+
+fA > fB with idle cycles in both write and read.
+Writing frequency = fA = 500MHz.
+Reading Frequency = fB = 225MHz.
+Burst Length = No. of data items to be transferred = 1024.
+No. of idle cycles between two successive writes is = 2.
+No. of idle cycles between two successive reads is = 1
+
+1.	The no. of idle cycles between two successive writes is 3 clock cycle. It means that, after writing one data, module A is waiting for one clock cycle, to initiate the next write. So, it can be understood that for every three clock cycles, one data is written.
+
+2.	The no. of idle cycles between two successive reads is 2 clock cycles. It means that, after reading one data, module B is waiting for 3 clock cycles, to initiate the next read. So, it can be understood that for every two clock cycles, one data is read.
+
+3.	Time required to write one data item = 3 * 1/500MHz = 6ns
+
+4.	Time required to write all the data in the burst = 1024 * 6ns = 6144ns
+
+5.	Time required to read one data item = 2* 1/225MHz = 8.88ns 
+
+6.	So, for every 8.88 nSec, the module B is going to read one data in the burst.
+
+7.	So, in a period of 6144 nSec, 1024 no. of data items can be written.
+
+8.	The number of data items can be read in a period of 8192nsec,
+    	(6144ns / 8.88ns) = 691
+
+9.	The remaining number of bytes to be stored in the FIFO = 1024 – 691=333
+
+10.	So, the FIFO which has to be in this scenario must be capable of storing 333 data items.
+
+So, the minimum depth of the FIFO should be 333.
+
+
