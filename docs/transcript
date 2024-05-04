@@ -1,0 +1,964 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:57:10 on May 03,2024
+# vlog -reportprogress 300 async_fifo1.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# 	half_full
+# 	half_empty
+# End time: 19:57:11 on May 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:57:11 on May 03,2024
+# vlog -reportprogress 300 async_fifo1_tb_uvm.sv 
+# ** Error: (vlog-7) Failed to open design unit file "async_fifo1_tb_uvm.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 19:57:11 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2023.3/win64/vlog failed.
+# Error in macro ./run.do line 5
+# C:/questasim64_2023.3/win64/vlog failed.
+#     while executing
+# "vlog async_fifo1_tb_uvm.sv"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:58:02 on May 03,2024
+# vlog -reportprogress 300 async_fifo1.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# 	half_full
+# 	half_empty
+# End time: 19:58:02 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:58:02 on May 03,2024
+# vlog -reportprogress 300 testbench.sv 
+# -- Compiling interface Asynch_fifo_interface
+# ** Warning: transaction.sv(1): (vlog-13233) Design unit "testbench_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+# -- Compiling package testbench_sv_unit
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 19:58:02 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -c -voptargs="+acc" -sv_seed random async_fifo1_tb_uvm -do "run -all;" 
+# Start time: 19:58:02 on May 03,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# Sv_Seed = 3316961369
+# run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# w_data rand =161
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =  3
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =  4
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = a1, r_data = a1, time=52
+# entering generate loop
+# w_data rand = 52
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 03, r_data = 03, time=68
+# w_data rand =164
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =196
+# entering generate loop
+# Assertion check rdata: expected w_data = 04, r_data = 04, time=84
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =248
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 34, r_data = 34, time=100
+# entering generate loop
+# w_data rand =224
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = a4, r_data = a4, time=116
+# w_data rand = 82
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =171
+# entering generate loop
+# Assertion check rdata: expected w_data = c4, r_data = c4, time=132
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =234
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = f8, r_data = f8, time=148
+# entering generate loop
+# w_data rand =  9
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = e0, r_data = e0, time=164
+# w_data rand =139
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =122
+# entering generate loop
+# Assertion check rdata: expected w_data = 52, r_data = 52, time=180
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =172
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = ab, r_data = ab, time=196
+# entering generate loop
+# w_data rand =119
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = ea, r_data = ea, time=212
+# w_data rand =214
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =  9
+# entering generate loop
+# Assertion check rdata: expected w_data = 09, r_data = 09, time=228
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =123
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 8b, r_data = 8b, time=244
+# entering generate loop
+# w_data rand =144
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 7a, r_data = 7a, time=260
+# Assertion check rdata: expected w_data = ac, r_data = ac, time=276
+# Assertion check rdata: expected w_data = 77, r_data = 77, time=292
+# Assertion check rdata: expected w_data = d6, r_data = d6, time=308
+# Assertion check rdata: expected w_data = 09, r_data = 09, time=324
+# Assertion check rdata: expected w_data = 7b, r_data = 7b, time=340
+# Assertion check rdata: expected w_data = 90, r_data = 90, time=356
+add wave -position insertpoint  \
+sim:/async_fifo1_tb_uvm/bus_tb/D_SIZE \
+sim:/async_fifo1_tb_uvm/bus_tb/A_SIZE \
+sim:/async_fifo1_tb_uvm/bus_tb/w_data \
+sim:/async_fifo1_tb_uvm/bus_tb/w_inc \
+sim:/async_fifo1_tb_uvm/bus_tb/w_clk \
+sim:/async_fifo1_tb_uvm/bus_tb/w_rst \
+sim:/async_fifo1_tb_uvm/bus_tb/r_data \
+sim:/async_fifo1_tb_uvm/bus_tb/r_inc \
+sim:/async_fifo1_tb_uvm/bus_tb/r_clk \
+sim:/async_fifo1_tb_uvm/bus_tb/r_rst \
+sim:/async_fifo1_tb_uvm/bus_tb/w_full \
+sim:/async_fifo1_tb_uvm/bus_tb/r_empty
+# Break key hit
+# Break in Task testbench_sv_unit/generator::main at generator.sv line 42
+# 
+vsim -do run.do
+# No design specified
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:37 on May 03,2024
+# vlog -reportprogress 300 async_fifo1.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# 	half_full
+# 	half_empty
+# End time: 20:04:37 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:37 on May 03,2024
+# vlog -reportprogress 300 testbench.sv 
+# -- Compiling interface Asynch_fifo_interface
+# -- Compiling package testbench_sv_unit
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 20:04:38 on May 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 20:04:40 on May 03,2024, Elapsed time: 0:06:38
+# Errors: 0, Warnings: 2
+# vsim -c -voptargs="+acc" -sv_seed random async_fifo1_tb_uvm -do "run -all;" 
+# Start time: 20:04:40 on May 03,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# Sv_Seed = 2186577325
+# run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# w_data rand =227
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 32
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =217
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = e3, r_data = e3, time=52
+# entering generate loop
+# w_data rand =179
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 20, r_data = 20, time=68
+# w_data rand =255
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =148
+# entering generate loop
+# Assertion check rdata: expected w_data = d9, r_data = d9, time=84
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 20
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = b3, r_data = b3, time=100
+# entering generate loop
+# w_data rand =153
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = ff, r_data = ff, time=116
+# w_data rand = 29
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =196
+# entering generate loop
+# Assertion check rdata: expected w_data = 94, r_data = 94, time=132
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =208
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 14, r_data = 14, time=148
+# entering generate loop
+# w_data rand = 25
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 99, r_data = 99, time=164
+# w_data rand =200
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =192
+# entering generate loop
+# Assertion check rdata: expected w_data = 1d, r_data = 1d, time=180
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =167
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = c4, r_data = c4, time=196
+# entering generate loop
+# w_data rand =214
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = d0, r_data = d0, time=212
+# w_data rand = 93
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =228
+# entering generate loop
+# Assertion check rdata: expected w_data = 19, r_data = 19, time=228
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =252
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = c8, r_data = c8, time=244
+# entering generate loop
+# w_data rand = 31
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = c0, r_data = c0, time=260
+# Assertion check rdata: expected w_data = a7, r_data = a7, time=276
+# Assertion check rdata: expected w_data = d6, r_data = d6, time=292
+# Assertion check rdata: expected w_data = 5d, r_data = 5d, time=308
+# Assertion check rdata: expected w_data = e4, r_data = e4, time=324
+# Assertion check rdata: expected w_data = fc, r_data = fc, time=340
+# Assertion check rdata: expected w_data = 1f, r_data = 1f, time=356
+# Break key hit
+# Break in Module async_fifo1_tb_uvm at testbench.sv line 37
+# 
+# ** Error: wrong # args.  Usage: insert index itemname ?args?
+# Error in macro ./run.do line 7
+# wrong # args.  Usage: insert index itemname ?args?
+#     while executing
+# "add wave -position insertpoint"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:07:11 on May 03,2024
+# vlog -reportprogress 300 async_fifo1.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# 	half_full
+# 	half_empty
+# End time: 20:07:12 on May 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:07:12 on May 03,2024
+# vlog -reportprogress 300 testbench.sv 
+# -- Compiling interface Asynch_fifo_interface
+# -- Compiling package testbench_sv_unit
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 20:07:12 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:07:15 on May 03,2024, Elapsed time: 0:02:35
+# Errors: 1, Warnings: 1
+# vsim -c -voptargs="+acc" -sv_seed random async_fifo1_tb_uvm -do "run -all;" 
+# Start time: 20:07:15 on May 03,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# Sv_Seed = 2895434749
+# run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# w_data rand = 99
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =131
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =217
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 63, r_data = 63, time=52
+# entering generate loop
+# w_data rand =221
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 83, r_data = 83, time=68
+# w_data rand =109
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =169
+# entering generate loop
+# Assertion check rdata: expected w_data = d9, r_data = d9, time=84
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =230
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = dd, r_data = dd, time=100
+# entering generate loop
+# w_data rand = 60
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 6d, r_data = 6d, time=116
+# w_data rand = 74
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 45
+# entering generate loop
+# Assertion check rdata: expected w_data = a9, r_data = a9, time=132
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =113
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = e6, r_data = e6, time=148
+# entering generate loop
+# w_data rand = 86
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 3c, r_data = 3c, time=164
+# w_data rand =122
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 31
+# entering generate loop
+# Assertion check rdata: expected w_data = 4a, r_data = 4a, time=180
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =250
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 2d, r_data = 2d, time=196
+# entering generate loop
+# w_data rand =147
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 71, r_data = 71, time=212
+# w_data rand = 54
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =232
+# entering generate loop
+# Assertion check rdata: expected w_data = 56, r_data = 56, time=228
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =230
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 7a, r_data = 7a, time=244
+# entering generate loop
+# w_data rand =134
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 1f, r_data = 1f, time=260
+# Assertion check rdata: expected w_data = fa, r_data = fa, time=276
+# Assertion check rdata: expected w_data = 93, r_data = 93, time=292
+# Assertion check rdata: expected w_data = 36, r_data = 36, time=308
+# Assertion check rdata: expected w_data = e8, r_data = e8, time=324
+# Assertion check rdata: expected w_data = e6, r_data = e6, time=340
+# Assertion check rdata: expected w_data = 86, r_data = 86, time=356
+# Compile of async_fifo1.sv was successful.
+# Compile of Interface.sv failed with 1 errors.
+# Compile of Interface.sv was successful.
+# Break key hit
+# Break in Module async_fifo1_tb_uvm at testbench.sv line 38
+# 
+# ** Error: wrong # args.  Usage: insert index itemname ?args?
+# Error in macro ./run.do line 7
+# wrong # args.  Usage: insert index itemname ?args?
+#     while executing
+# "add wave -position insertpoint"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:18:53 on May 03,2024
+# vlog -reportprogress 300 async_fifo1.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# End time: 20:18:54 on May 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:18:54 on May 03,2024
+# vlog -reportprogress 300 testbench.sv 
+# -- Compiling interface Asynch_fifo_interface
+# -- Compiling package testbench_sv_unit
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 20:18:54 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:18:57 on May 03,2024, Elapsed time: 0:11:42
+# Errors: 1, Warnings: 4
+# vsim -c -voptargs="+acc" -sv_seed random async_fifo1_tb_uvm -do "run -all;" 
+# Start time: 20:18:57 on May 03,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.half_full(fast)
+# Loading work.half_empty(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# Sv_Seed = 4225057001
+# run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# w_data rand =233
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 68
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =223
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = e9, r_data = e9, time=52
+# entering generate loop
+# w_data rand =  9
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 44, r_data = 44, time=68
+# w_data rand =170
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 15
+# entering generate loop
+# Assertion check rdata: expected w_data = df, r_data = df, time=84
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =171
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 09, r_data = 09, time=100
+# entering generate loop
+# w_data rand =117
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = aa, r_data = aa, time=116
+# w_data rand = 20
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =194
+# entering generate loop
+# Assertion check rdata: expected w_data = 0f, r_data = 0f, time=132
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 85
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = ab, r_data = ab, time=148
+# entering generate loop
+# w_data rand =221
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 75, r_data = 75, time=164
+# w_data rand =135
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 31
+# entering generate loop
+# Assertion check rdata: expected w_data = 14, r_data = 14, time=180
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =211
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = c2, r_data = c2, time=196
+# entering generate loop
+# w_data rand =188
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 55, r_data = 55, time=212
+# w_data rand =244
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =188
+# entering generate loop
+# Assertion check rdata: expected w_data = dd, r_data = dd, time=228
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 28
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 87, r_data = 87, time=244
+# entering generate loop
+# w_data rand = 71
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 1f, r_data = 1f, time=260
+# Assertion check rdata: expected w_data = d3, r_data = d3, time=276
+# Assertion check rdata: expected w_data = bc, r_data = bc, time=292
+# Assertion check rdata: expected w_data = f4, r_data = f4, time=308
+# Assertion check rdata: expected w_data = bc, r_data = bc, time=324
+# Assertion check rdata: expected w_data = 1c, r_data = 1c, time=340
+# Assertion check rdata: expected w_data = 47, r_data = 47, time=356
+# Break key hit
+# Break in Module async_fifo1_tb_uvm at testbench.sv line 38
+# 
+quit -sim
+# End time: 20:24:25 on May 03,2024, Elapsed time: 0:05:28
+# Errors: 0, Warnings: 2
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:24:29 on May 03,2024
+# vlog -reportprogress 300 async_fifo1.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# End time: 20:24:30 on May 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:24:30 on May 03,2024
+# vlog -reportprogress 300 testbench.sv 
+# -- Compiling interface Asynch_fifo_interface
+# -- Compiling package testbench_sv_unit
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 20:24:30 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -sv_seed random async_fifo1_tb_uvm -do "run -all;" 
+# Start time: 20:24:30 on May 03,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.half_full(fast)
+# Loading work.half_empty(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# Sv_Seed = 2824168841
+# run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# w_data rand =198
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 59
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =234
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = c6, r_data = c6, time=52
+# entering generate loop
+# w_data rand =222
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 3b, r_data = 3b, time=68
+# w_data rand = 15
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =232
+# entering generate loop
+# Assertion check rdata: expected w_data = ea, r_data = ea, time=84
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 34
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = de, r_data = de, time=100
+# entering generate loop
+# w_data rand = 88
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 0f, r_data = 0f, time=116
+# w_data rand =173
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =183
+# entering generate loop
+# Assertion check rdata: expected w_data = e8, r_data = e8, time=132
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =167
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 22, r_data = 22, time=148
+# entering generate loop
+# w_data rand =142
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 58, r_data = 58, time=164
+# w_data rand =211
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =118
+# entering generate loop
+# Assertion check rdata: expected w_data = ad, r_data = ad, time=180
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 43
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = b7, r_data = b7, time=196
+# entering generate loop
+# w_data rand = 21
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = a7, r_data = a7, time=212
+# w_data rand = 35
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 43
+# entering generate loop
+# Assertion check rdata: expected w_data = 8e, r_data = 8e, time=228
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 16
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = d3, r_data = d3, time=244
+# entering generate loop
+# w_data rand =  1
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 76, r_data = 76, time=260
+# Assertion check rdata: expected w_data = 2b, r_data = 2b, time=276
+# Assertion check rdata: expected w_data = 15, r_data = 15, time=292
+# Assertion check rdata: expected w_data = 23, r_data = 23, time=308
+# Assertion check rdata: expected w_data = 2b, r_data = 2b, time=324
+# Assertion check rdata: expected w_data = 10, r_data = 10, time=340
+# Assertion check rdata: expected w_data = 01, r_data = 01, time=356
