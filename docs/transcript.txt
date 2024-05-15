@@ -1,0 +1,2193 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:36 on May 14,2024
+# vlog -reportprogress 300 design.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# 
+# Top level modules:
+# 	async_fifo1
+# End time: 22:49:36 on May 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:36 on May 14,2024
+# vlog -reportprogress 300 testbench.sv 
+# -- Compiling interface Asynch_fifo_interface
+# -- Compiling package testbench_sv_unit
+# -- Importing package transaction_pkg
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 22:49:37 on May 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" async_fifo1_tb_uvm -do "run -all;" 
+# Start time: 22:49:37 on May 14,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt3
+# Loading sv_std.std
+# Loading work.transaction_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.half_full(fast)
+# Loading work.half_empty(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# [ MONITOR_OUT ] ****** MONITOR_OUT STARTED ******
+# i am here
+#############################################################################################################
+# w_data rand = 48
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =202
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =100
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 30, r_data = 30, time=52
+# entering generate loop
+# w_data rand =152
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = ca, r_data = ca, time=68
+# PASS : expected wdata = ca, rdata = ca, uniq_id='{0, 0, 0, 0}
+# w_data rand = 31
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 20
+# entering generate loop
+# Assertion check rdata: expected w_data = 64, r_data = 64, time=84
+# ** Error: Checking failed: expected wdata = ca, rdata = 64,uniq_id='{0, 0, 0, 0, 0}
+#    Time: 84 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =164
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 98, r_data = 98, time=100
+# PASS : expected wdata = 98, rdata = 98, uniq_id='{0, 0, 0, 0, 0, 0}
+# entering generate loop
+# w_data rand = 58
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 1f, r_data = 1f, time=116
+# ** Error: Checking failed: expected wdata = 98, rdata = 1f,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 116 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# w_data rand =219
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =169
+# entering generate loop
+# Assertion check rdata: expected w_data = 14, r_data = 14, time=132
+# PASS : expected wdata = 14, rdata = 14, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0}
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =223
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = a4, r_data = a4, time=148
+# ** Error: Checking failed: expected wdata = 14, rdata = a4,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 148 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# entering generate loop
+# w_data rand = 87
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 3a, r_data = 3a, time=164
+# PASS : expected wdata = 3a, rdata = 3a, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# w_data rand = 63
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =126
+# entering generate loop
+# Assertion check rdata: expected w_data = db, r_data = db, time=180
+# ** Error: Checking failed: expected wdata = 3a, rdata = db,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 180 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =228
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = a9, r_data = a9, time=196
+# PASS : expected wdata = a9, rdata = a9, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# entering generate loop
+# w_data rand = 24
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = df, r_data = df, time=212
+# ** Error: Checking failed: expected wdata = a9, rdata = df,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 212 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# w_data rand =171
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =234
+# entering generate loop
+# Assertion check rdata: expected w_data = 57, r_data = 57, time=228
+# PASS : expected wdata = 57, rdata = 57, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =224
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 3f, r_data = 3f, time=244
+# ** Error: Checking failed: expected wdata = 57, rdata = 3f,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 244 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# entering generate loop
+# w_data rand =200
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 7e, r_data = 7e, time=260
+# PASS : expected wdata = 7e, rdata = 7e, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Assertion check rdata: expected w_data = e4, r_data = e4, time=276
+# ** Error: Checking failed: expected wdata = 7e, rdata = e4,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 276 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# Assertion check rdata: expected w_data = 18, r_data = 18, time=292
+# PASS : expected wdata = 18, rdata = 18, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Assertion check rdata: expected w_data = ab, r_data = ab, time=308
+# ** Error: Checking failed: expected wdata = 18, rdata = ab,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 308 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# Assertion check rdata: expected w_data = ea, r_data = ea, time=324
+# PASS : expected wdata = ea, rdata = ea, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Assertion check rdata: expected w_data = e0, r_data = e0, time=340
+# ** Error: Checking failed: expected wdata = ea, rdata = e0,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 340 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# Assertion check rdata: expected w_data = c8, r_data = c8, time=356
+# PASS : expected wdata = c8, rdata = c8, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Break key hit
+# Break in Module async_fifo1_tb_uvm at testbench.sv line 72
+# 
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:45 on May 14,2024
+# vlog -reportprogress 300 -coveropt 3 "+cover" "+acc" design.sv testbench.sv 
+# -- Compiling module async_fifo1
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# -- Compiling module half_full
+# -- Compiling module half_empty
+# -- Compiling interface Asynch_fifo_interface
+# -- Compiling package testbench_sv_unit
+# -- Importing package transaction_pkg
+# -- Compiling module test
+# -- Compiling module async_fifo1_tb_uvm
+# 
+# Top level modules:
+# 	async_fifo1_tb_uvm
+# End time: 22:49:45 on May 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:49:47 on May 14,2024, Elapsed time: 0:00:10
+# Errors: 9, Warnings: 1
+# vsim -c -voptargs="+acc" -coverage -vopt async_fifo1_tb_uvm -do "coverage save -onexit -directive -codeALL team1.ucdb; run -all" 
+# Start time: 22:49:47 on May 14,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.transaction_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.async_fifo1_tb_uvm(fast)
+# Loading work.Asynch_fifo_interface(fast__2)
+# Loading work.test(fast)
+# Loading work.async_fifo1(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.wptr_full(fast)
+# Loading work.half_full(fast)
+# Loading work.half_empty(fast)
+# Loading work.Asynch_fifo_interface(fast)
+# coverage save -onexit -directive -codeALL team1.ucdb
+#  run -all
+# [ DRIVER ] ************ RESET STARTED *************
+# [ DRIVER ] ************* RESET ENDED **************
+# ************** GENERATOR_STARTED *****************
+# {Genarator} tx_cnt =          60
+# entering generate loop
+# [ DRIVER ] *************** DRIVER STARTED ****************
+# [ MONITOR_OUT ] ****** MONITOR_OUT STARTED ******
+# i am here
+#############################################################################################################
+# w_data rand = 48
+# entering generate loop
+# the tx_cnt1 =          1, the tx_cnt2=          0, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =202
+# entering generate loop
+# the tx_cnt1 =          2, the tx_cnt2=          1, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =100
+# entering generate loop
+# the tx_cnt1 =          3, the tx_cnt2=          2, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 30, r_data = 30, time=52
+# entering generate loop
+# w_data rand =152
+# entering generate loop
+# the tx_cnt1 =          4, the tx_cnt2=          3, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = ca, r_data = ca, time=68
+# PASS : expected wdata = ca, rdata = ca, uniq_id='{0, 0, 0, 0}
+# w_data rand = 31
+# entering generate loop
+# the tx_cnt1 =          5, the tx_cnt2=          4, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand = 20
+# entering generate loop
+# Assertion check rdata: expected w_data = 64, r_data = 64, time=84
+# ** Error: Checking failed: expected wdata = ca, rdata = 64,uniq_id='{0, 0, 0, 0, 0}
+#    Time: 84 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# the tx_cnt1 =          6, the tx_cnt2=          5, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =164
+# entering generate loop
+# the tx_cnt1 =          7, the tx_cnt2=          6, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 98, r_data = 98, time=100
+# PASS : expected wdata = 98, rdata = 98, uniq_id='{0, 0, 0, 0, 0, 0}
+# entering generate loop
+# w_data rand = 58
+# entering generate loop
+# the tx_cnt1 =          8, the tx_cnt2=          7, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 1f, r_data = 1f, time=116
+# ** Error: Checking failed: expected wdata = 98, rdata = 1f,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 116 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# w_data rand =219
+# entering generate loop
+# the tx_cnt1 =          9, the tx_cnt2=          8, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =169
+# entering generate loop
+# Assertion check rdata: expected w_data = 14, r_data = 14, time=132
+# PASS : expected wdata = 14, rdata = 14, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0}
+# the tx_cnt1 =         10, the tx_cnt2=          9, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =223
+# entering generate loop
+# the tx_cnt1 =         11, the tx_cnt2=         10, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = a4, r_data = a4, time=148
+# ** Error: Checking failed: expected wdata = 14, rdata = a4,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 148 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# entering generate loop
+# w_data rand = 87
+# entering generate loop
+# the tx_cnt1 =         12, the tx_cnt2=         11, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = 3a, r_data = 3a, time=164
+# PASS : expected wdata = 3a, rdata = 3a, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# w_data rand = 63
+# entering generate loop
+# the tx_cnt1 =         13, the tx_cnt2=         12, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =126
+# entering generate loop
+# Assertion check rdata: expected w_data = db, r_data = db, time=180
+# ** Error: Checking failed: expected wdata = 3a, rdata = db,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 180 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# the tx_cnt1 =         14, the tx_cnt2=         13, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =228
+# entering generate loop
+# the tx_cnt1 =         15, the tx_cnt2=         14, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = a9, r_data = a9, time=196
+# PASS : expected wdata = a9, rdata = a9, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# entering generate loop
+# w_data rand = 24
+# entering generate loop
+# the tx_cnt1 =         16, the tx_cnt2=         15, w_inc=1
+# entering generate loop
+# entering generate loop
+# Assertion check rdata: expected w_data = df, r_data = df, time=212
+# ** Error: Checking failed: expected wdata = a9, rdata = df,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 212 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# w_data rand =171
+# entering generate loop
+# the tx_cnt1 =         17, the tx_cnt2=         16, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =234
+# entering generate loop
+# Assertion check rdata: expected w_data = 57, r_data = 57, time=228
+# PASS : expected wdata = 57, rdata = 57, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# the tx_cnt1 =         18, the tx_cnt2=         17, w_inc=1
+# entering generate loop
+# entering generate loop
+# w_data rand =224
+# entering generate loop
+# the tx_cnt1 =         19, the tx_cnt2=         18, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 3f, r_data = 3f, time=244
+# ** Error: Checking failed: expected wdata = 57, rdata = 3f,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 244 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# entering generate loop
+# w_data rand =200
+# entering generate loop
+# the tx_cnt1 =         20, the tx_cnt2=         19, w_inc=1
+# entering generate loop
+# Assertion check rdata: expected w_data = 7e, r_data = 7e, time=260
+# PASS : expected wdata = 7e, rdata = 7e, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Assertion check rdata: expected w_data = e4, r_data = e4, time=276
+# ** Error: Checking failed: expected wdata = 7e, rdata = e4,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 276 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# Assertion check rdata: expected w_data = 18, r_data = 18, time=292
+# PASS : expected wdata = 18, rdata = 18, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Assertion check rdata: expected w_data = ab, r_data = ab, time=308
+# ** Error: Checking failed: expected wdata = 18, rdata = ab,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 308 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# Assertion check rdata: expected w_data = ea, r_data = ea, time=324
+# PASS : expected wdata = ea, rdata = ea, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Assertion check rdata: expected w_data = e0, r_data = e0, time=340
+# ** Error: Checking failed: expected wdata = ea, rdata = e0,uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#    Time: 340 ns  Scope: testbench_sv_unit.scoreboard.get_data_r File: scoreboard.sv Line: 70
+# Assertion check rdata: expected w_data = c8, r_data = c8, time=356
+# PASS : expected wdata = c8, rdata = c8, uniq_id='{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+# Break key hit
+# Break in Module async_fifo1_tb_uvm at testbench.sv line 73
+# QuestaSim-64 vcover 2023.3 Coverage Utility 2023.07 Jul 17 2023
+# Start time: 22:50:00 on May 14,2024
+# vcover report -html team1.ucdb 
+# End time: 22:50:06 on May 14,2024, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# Coverage Report by instance with details
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/bus_tb
+# === Design Unit: work.Asynch_fifo_interface
+# =================================================================================
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                         52        44         8    84.61%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/bus_tb --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                       r_half_empty           0           0        0.00 
+#                                              r_rst           0           1       50.00 
+#                                             w_full           0           0        0.00 
+#                                        w_half_full           0           0        0.00 
+#                                              w_rst           0           1       50.00 
+# 
+# Total Node Count     =         26 
+# Toggled Node Count   =         21 
+# Untoggled Node Count =          5 
+# 
+# Toggle Coverage      =      84.61% (44 of 52 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/test_inst
+# === Design Unit: work.test
+# =================================================================================
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                       3         3         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/test_inst --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File test.sv
+#     6               1                          1     
+#     9               1                          1     
+#     11              1                          1     
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/fifomem_1
+# === Design Unit: work.fifo_mem
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/fifomem_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     34                                        41     Count coming in to IF
+#     34              1                         20     
+#                                               21     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+# Condition Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Conditions                       2         1         1    50.00%
+# 
+# ================================Condition Details================================
+# 
+# Condition Coverage for instance /async_fifo1_tb_uvm/dut/fifomem_1 --
+# 
+#   File design.sv
+# ----------------Focused Condition View-------------------
+# Line       34 Item    1  (w_inc && ~w_full)
+# Condition totals: 1 of 2 input terms covered = 50.00%
+# 
+#   Input Term   Covered  Reason for no coverage   Hint
+#  -----------  --------  -----------------------  --------------
+#        w_inc         Y
+#       w_full         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  w_inc_0               -                             
+#   Row   2:          1  w_inc_1               ~w_full                       
+#   Row   3:          1  w_full_0              w_inc                         
+#   Row   4:    ***0***  w_full_1              w_inc                         
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                       4         4         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/fifomem_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     28              1                         42     
+#     29              1                         42     
+#     33              1                         41     
+#     35              1                         20     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        102        54        48    52.94%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/fifomem_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                             a[0-7]           0           0        0.00 
+#                                             b[0-7]           0           0        0.00 
+#                                          r_addr[4]           0           1       50.00 
+#                                        r_addr[5-7]           0           0        0.00 
+#                                          w_addr[4]           0           1       50.00 
+#                                        w_addr[5-7]           0           0        0.00 
+#                                             w_full           0           0        0.00 
+# 
+# Total Node Count     =         51 
+# Toggled Node Count   =         26 
+# Untoggled Node Count =         25 
+# 
+# Toggle Coverage      =      52.94% (54 of 102 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/rptr_empty_1
+# === Design Unit: work.rptr_empty
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/rptr_empty_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     57                                        43     Count coming in to IF
+#     57              1                          2     
+#     59              1                         41     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     72                                         8     Count coming in to IF
+#     72              1                          2     
+#     74              1                          6     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+# Expression Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Expressions                      1         1         0   100.00%
+# 
+# ================================Expression Details================================
+# 
+# Expression Coverage for instance /async_fifo1_tb_uvm/dut/rptr_empty_1 --
+# 
+#   File design.sv
+# ----------------Focused Expression View-----------------
+# Line       69 Item    1  (r_graynext == r2w_ptr)
+# Expression totals: 1 of 1 input term covered = 100.00%
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                      11        11         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/rptr_empty_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     56              1                         43     
+#     58              1                          2     
+#     60              1                         41     
+#     63              1                         63     
+#     64              1                         63     
+#     65              1                         63     
+#     66              1                         63     
+#     69              1                         83     
+#     71              1                          8     
+#     73              1                          2     
+#     75              1                          6     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        116        60        56    51.72%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/rptr_empty_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                       r2w_ptr[3-4]           0           1       50.00 
+#                                       r2w_ptr[5-8]           0           0        0.00 
+#                                          r_addr[4]           0           1       50.00 
+#                                        r_addr[5-7]           0           0        0.00 
+#                                           r_bin[4]           0           1       50.00 
+#                                         r_bin[5-8]           0           0        0.00 
+#                                       r_binnext[4]           0           1       50.00 
+#                                     r_binnext[5-8]           0           0        0.00 
+#                                    r_graynext[3-4]           0           1       50.00 
+#                                    r_graynext[5-8]           0           0        0.00 
+#                                         r_ptr[3-4]           0           1       50.00 
+#                                         r_ptr[5-8]           0           0        0.00 
+#                                              r_rst           0           1       50.00 
+# 
+# Total Node Count     =         58 
+# Toggled Node Count   =         25 
+# Untoggled Node Count =         33 
+# 
+# Toggle Coverage      =      51.72% (60 of 116 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/sync_r2w_1
+# === Design Unit: work.sync_r2w
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/sync_r2w_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     93                                        63     Count coming in to IF
+#     93              1                          2     
+#     94              1                         61     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                       3         3         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/sync_r2w_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     92              1                         63     
+#     93              1                          2     
+#     94              1                         61     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                         58        27        31    46.55%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/sync_r2w_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                         r_ptr[3-4]           0           1       50.00 
+#                                         r_ptr[5-8]           0           0        0.00 
+#                                       w2r_ptr[3-4]           0           1       50.00 
+#                                       w2r_ptr[5-8]           0           0        0.00 
+#                                              w_rst           0           1       50.00 
+#                                      wq1_rptr[3-4]           0           1       50.00 
+#                                      wq1_rptr[5-8]           0           0        0.00 
+# 
+# Total Node Count     =         29 
+# Toggled Node Count   =         10 
+# Untoggled Node Count =         19 
+# 
+# Toggle Coverage      =      46.55% (27 of 58 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/sync_w2r_1
+# === Design Unit: work.sync_w2r
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/sync_w2r_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     112                                       35     Count coming in to IF
+#     112             1                          2     
+#     114             1                         33     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                       3         3         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/sync_w2r_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     111             1                         35     
+#     113             1                          2     
+#     115             1                         33     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                         58        27        31    46.55%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/sync_w2r_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                       r2w_ptr[3-4]           0           1       50.00 
+#                                       r2w_ptr[5-8]           0           0        0.00 
+#                                              r_rst           0           1       50.00 
+#                                      rq1_wptr[3-4]           0           1       50.00 
+#                                      rq1_wptr[5-8]           0           0        0.00 
+#                                         w_ptr[3-4]           0           1       50.00 
+#                                         w_ptr[5-8]           0           0        0.00 
+# 
+# Total Node Count     =         29 
+# Toggled Node Count   =         10 
+# Untoggled Node Count =         19 
+# 
+# Toggle Coverage      =      46.55% (27 of 58 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/wptr_full_1
+# === Design Unit: work.wptr_full
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/wptr_full_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     137                                       43     Count coming in to IF
+#     137             1                          2     
+#     139             1                         41     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     152                                        3     Count coming in to IF
+#     152             1                          2     
+#     154             1                          1     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+# Expression Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Expressions                      1         0         1     0.00%
+# 
+# ================================Expression Details================================
+# 
+# Expression Coverage for instance /async_fifo1_tb_uvm/dut/wptr_full_1 --
+# 
+#   File design.sv
+# ----------------Focused Expression View-----------------
+# Line       149 Item    1  (w_graynext == {~w2r_ptr[8:7],w2r_ptr[6:0]})
+# Expression totals: 0 of 1 input term covered = 0.00%
+# 
+#                                     Input Term   Covered  Reason for no coverage   Hint
+#                                    -----------  --------  -----------------------  --------------
+#   (w_graynext == {~w2r_ptr[8:7],w2r_ptr[6:0]})         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target                                      Non-masking condition(s)      
+#  ---------  ---------  --------------------                            -------------------------     
+#   Row   1:          1  (w_graynext == {~w2r_ptr[8:7],w2r_ptr[6:0]})_0  -                             
+#   Row   2:    ***0***  (w_graynext == {~w2r_ptr[8:7],w2r_ptr[6:0]})_1  -                             
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                      11        11         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/wptr_full_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     136             1                         43     
+#     138             1                          2     
+#     140             1                         41     
+#     143             1                         62     
+#     144             1                         62     
+#     145             1                         62     
+#     146             1                         62     
+#     149             1                         83     
+#     151             1                          3     
+#     153             1                          2     
+#     155             1                          1     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        116        56        60    48.27%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/wptr_full_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                       w2r_ptr[3-4]           0           1       50.00 
+#                                       w2r_ptr[5-8]           0           0        0.00 
+#                                          w_addr[4]           0           1       50.00 
+#                                        w_addr[5-7]           0           0        0.00 
+#                                           w_bin[4]           0           1       50.00 
+#                                         w_bin[5-8]           0           0        0.00 
+#                                       w_binnext[4]           0           1       50.00 
+#                                     w_binnext[5-8]           0           0        0.00 
+#                                             w_full           0           0        0.00 
+#                                    w_graynext[3-4]           0           1       50.00 
+#                                    w_graynext[5-8]           0           0        0.00 
+#                                         w_ptr[3-4]           0           1       50.00 
+#                                         w_ptr[5-8]           0           0        0.00 
+#                                              w_rst           0           1       50.00 
+#                                          wfull_val           0           0        0.00 
+# 
+# Total Node Count     =         58 
+# Toggled Node Count   =         23 
+# Untoggled Node Count =         35 
+# 
+# Toggle Coverage      =      48.27% (56 of 116 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/half_full_1
+# === Design Unit: work.half_full
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         1         1    50.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/half_full_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     170                                       42     Count coming in to IF
+#     170             1                    ***0***     
+#                                               42     All False Count
+# Branch totals: 1 hit of 2 branches = 50.00%
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                       2         1         1    50.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/half_full_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     168             1                         42     
+#     171             1                    ***0***     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                         38        16        22    42.10%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/half_full_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                         r_ptr[3-4]           0           1       50.00 
+#                                         r_ptr[5-8]           0           0        0.00 
+#                                        w_half_full           0           0        0.00 
+#                                         w_ptr[3-4]           0           1       50.00 
+#                                         w_ptr[5-8]           0           0        0.00 
+# 
+# Total Node Count     =         19 
+# Toggled Node Count   =          6 
+# Untoggled Node Count =         13 
+# 
+# Toggle Coverage      =      42.10% (16 of 38 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut/half_empty_1
+# === Design Unit: work.half_empty
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         1         1    50.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /async_fifo1_tb_uvm/dut/half_empty_1
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+# ------------------------------------IF Branch------------------------------------
+#     187                                       22     Count coming in to IF
+#     187             1                    ***0***     
+#                                               22     All False Count
+# Branch totals: 1 hit of 2 branches = 50.00%
+# 
+# 
+# Condition Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Conditions                       1         0         1     0.00%
+# 
+# ================================Condition Details================================
+# 
+# Condition Coverage for instance /async_fifo1_tb_uvm/dut/half_empty_1 --
+# 
+#   File design.sv
+# ----------------Focused Condition View-------------------
+# Line       187 Item    1  (r_ptr == (333 / 2))
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#             Input Term   Covered  Reason for no coverage   Hint
+#            -----------  --------  -----------------------  --------------
+#   (r_ptr == (333 / 2))         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target              Non-masking condition(s)      
+#  ---------  ---------  --------------------    -------------------------     
+#   Row   1:          1  (r_ptr == (333 / 2))_0  -                             
+#   Row   2:    ***0***  (r_ptr == (333 / 2))_1  -                             
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                       2         1         1    50.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm/dut/half_empty_1 --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File design.sv
+#     185             1                         22     
+#     188             1                    ***0***     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                         38        16        22    42.10%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut/half_empty_1 --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                         r_ptr[3-4]           0           1       50.00 
+#                                         r_ptr[5-8]           0           0        0.00 
+#                                       w_half_empty           0           0        0.00 
+#                                         w_ptr[3-4]           0           1       50.00 
+#                                         w_ptr[5-8]           0           0        0.00 
+# 
+# Total Node Count     =         19 
+# Toggled Node Count   =          6 
+# Untoggled Node Count =         13 
+# 
+# Toggle Coverage      =      42.10% (16 of 38 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm/dut
+# === Design Unit: work.async_fifo1
+# =================================================================================
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        108        50        58    46.29%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /async_fifo1_tb_uvm/dut --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                       r2w_ptr[3-4]           0           1       50.00 
+#                                       r2w_ptr[5-8]           0           0        0.00 
+#                                          r_addr[4]           0           1       50.00 
+#                                        r_addr[5-7]           0           0        0.00 
+#                                         r_ptr[3-4]           0           1       50.00 
+#                                         r_ptr[5-8]           0           0        0.00 
+#                                       w2r_ptr[3-4]           0           1       50.00 
+#                                       w2r_ptr[5-8]           0           0        0.00 
+#                                          w_addr[4]           0           1       50.00 
+#                                        w_addr[5-7]           0           0        0.00 
+#                                       w_half_empty           0           0        0.00 
+#                                        w_half_full           0           0        0.00 
+#                                         w_ptr[3-4]           0           1       50.00 
+#                                         w_ptr[5-8]           0           0        0.00 
+# 
+# Total Node Count     =         54 
+# Toggled Node Count   =         20 
+# Untoggled Node Count =         34 
+# 
+# Toggle Coverage      =      46.29% (50 of 108 bins)
+# 
+# =================================================================================
+# === Instance: /async_fifo1_tb_uvm
+# === Design Unit: work.async_fifo1_tb_uvm
+# =================================================================================
+# 
+# Covergroup Coverage:
+#     Covergroups                      1        na        na    67.57%
+#         Coverpoints/Crosses          9        na        na        na
+#             Covergroup Bins        268        31       237    11.56%
+# ----------------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric       Goal       Bins    Status               
+#                                                                                                          
+# ----------------------------------------------------------------------------------------------------------
+#  TYPE /async_fifo1_tb_uvm/fifo_coverage                67.57%        100          -    Uncovered            
+#     covered/total bins:                                    31        268          -                      
+#     missing/total bins:                                   237        268          -                      
+#     % Hit:                                             11.56%        100          -                      
+#     Coverpoint #coverpoint__0#                          8.20%        100          -    Uncovered            
+#         covered/total bins:                                21        256          -                      
+#         missing/total bins:                               235        256          -                      
+#         % Hit:                                          8.20%        100          -                      
+#     Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__2#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__5#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__6#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__7#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#     Coverpoint #coverpoint__8#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#  Covergroup instance \/async_fifo1_tb_uvm/#ublk#98876365#81/fifo_cov  
+#                                                        67.57%        100          -    Uncovered            
+#     covered/total bins:                                    31        268          -                      
+#     missing/total bins:                                   237        268          -                      
+#     % Hit:                                             11.56%        100          -                      
+#     Coverpoint #coverpoint__0#                          8.20%        100          -    Uncovered            
+#         covered/total bins:                                21        256          -                      
+#         missing/total bins:                               235        256          -                      
+#         % Hit:                                          8.20%        100          -                      
+#         bin wdata_bin[0]                                    5          1          -    Covered              
+#         bin wdata_bin[1]                                    0          1          -    ZERO                 
+#         bin wdata_bin[2]                                    0          1          -    ZERO                 
+#         bin wdata_bin[3]                                    0          1          -    ZERO                 
+#         bin wdata_bin[4]                                    0          1          -    ZERO                 
+#         bin wdata_bin[5]                                    0          1          -    ZERO                 
+#         bin wdata_bin[6]                                    0          1          -    ZERO                 
+#         bin wdata_bin[7]                                    0          1          -    ZERO                 
+#         bin wdata_bin[8]                                    0          1          -    ZERO                 
+#         bin wdata_bin[9]                                    0          1          -    ZERO                 
+#         bin wdata_bin[10]                                   0          1          -    ZERO                 
+#         bin wdata_bin[11]                                   0          1          -    ZERO                 
+#         bin wdata_bin[12]                                   0          1          -    ZERO                 
+#         bin wdata_bin[13]                                   0          1          -    ZERO                 
+#         bin wdata_bin[14]                                   0          1          -    ZERO                 
+#         bin wdata_bin[15]                                   0          1          -    ZERO                 
+#         bin wdata_bin[16]                                   0          1          -    ZERO                 
+#         bin wdata_bin[17]                                   0          1          -    ZERO                 
+#         bin wdata_bin[18]                                   0          1          -    ZERO                 
+#         bin wdata_bin[19]                                   0          1          -    ZERO                 
+#         bin wdata_bin[20]                                   3          1          -    Covered              
+#         bin wdata_bin[21]                                   0          1          -    ZERO                 
+#         bin wdata_bin[22]                                   0          1          -    ZERO                 
+#         bin wdata_bin[23]                                   0          1          -    ZERO                 
+#         bin wdata_bin[24]                                   3          1          -    Covered              
+#         bin wdata_bin[25]                                   0          1          -    ZERO                 
+#         bin wdata_bin[26]                                   0          1          -    ZERO                 
+#         bin wdata_bin[27]                                   0          1          -    ZERO                 
+#         bin wdata_bin[28]                                   0          1          -    ZERO                 
+#         bin wdata_bin[29]                                   0          1          -    ZERO                 
+#         bin wdata_bin[30]                                   0          1          -    ZERO                 
+#         bin wdata_bin[31]                                   3          1          -    Covered              
+#         bin wdata_bin[32]                                   0          1          -    ZERO                 
+#         bin wdata_bin[33]                                   0          1          -    ZERO                 
+#         bin wdata_bin[34]                                   0          1          -    ZERO                 
+#         bin wdata_bin[35]                                   0          1          -    ZERO                 
+#         bin wdata_bin[36]                                   0          1          -    ZERO                 
+#         bin wdata_bin[37]                                   0          1          -    ZERO                 
+#         bin wdata_bin[38]                                   0          1          -    ZERO                 
+#         bin wdata_bin[39]                                   0          1          -    ZERO                 
+#         bin wdata_bin[40]                                   0          1          -    ZERO                 
+#         bin wdata_bin[41]                                   0          1          -    ZERO                 
+#         bin wdata_bin[42]                                   0          1          -    ZERO                 
+#         bin wdata_bin[43]                                   0          1          -    ZERO                 
+#         bin wdata_bin[44]                                   0          1          -    ZERO                 
+#         bin wdata_bin[45]                                   0          1          -    ZERO                 
+#         bin wdata_bin[46]                                   0          1          -    ZERO                 
+#         bin wdata_bin[47]                                   0          1          -    ZERO                 
+#         bin wdata_bin[48]                                   3          1          -    Covered              
+#         bin wdata_bin[49]                                   0          1          -    ZERO                 
+#         bin wdata_bin[50]                                   0          1          -    ZERO                 
+#         bin wdata_bin[51]                                   0          1          -    ZERO                 
+#         bin wdata_bin[52]                                   0          1          -    ZERO                 
+#         bin wdata_bin[53]                                   0          1          -    ZERO                 
+#         bin wdata_bin[54]                                   0          1          -    ZERO                 
+#         bin wdata_bin[55]                                   0          1          -    ZERO                 
+#         bin wdata_bin[56]                                   0          1          -    ZERO                 
+#         bin wdata_bin[57]                                   0          1          -    ZERO                 
+#         bin wdata_bin[58]                                   3          1          -    Covered              
+#         bin wdata_bin[59]                                   0          1          -    ZERO                 
+#         bin wdata_bin[60]                                   0          1          -    ZERO                 
+#         bin wdata_bin[61]                                   0          1          -    ZERO                 
+#         bin wdata_bin[62]                                   0          1          -    ZERO                 
+#         bin wdata_bin[63]                                   3          1          -    Covered              
+#         bin wdata_bin[64]                                   0          1          -    ZERO                 
+#         bin wdata_bin[65]                                   0          1          -    ZERO                 
+#         bin wdata_bin[66]                                   0          1          -    ZERO                 
+#         bin wdata_bin[67]                                   0          1          -    ZERO                 
+#         bin wdata_bin[68]                                   0          1          -    ZERO                 
+#         bin wdata_bin[69]                                   0          1          -    ZERO                 
+#         bin wdata_bin[70]                                   0          1          -    ZERO                 
+#         bin wdata_bin[71]                                   0          1          -    ZERO                 
+#         bin wdata_bin[72]                                   0          1          -    ZERO                 
+#         bin wdata_bin[73]                                   0          1          -    ZERO                 
+#         bin wdata_bin[74]                                   0          1          -    ZERO                 
+#         bin wdata_bin[75]                                   0          1          -    ZERO                 
+#         bin wdata_bin[76]                                   0          1          -    ZERO                 
+#         bin wdata_bin[77]                                   0          1          -    ZERO                 
+#         bin wdata_bin[78]                                   0          1          -    ZERO                 
+#         bin wdata_bin[79]                                   0          1          -    ZERO                 
+#         bin wdata_bin[80]                                   0          1          -    ZERO                 
+#         bin wdata_bin[81]                                   0          1          -    ZERO                 
+#         bin wdata_bin[82]                                   0          1          -    ZERO                 
+#         bin wdata_bin[83]                                   0          1          -    ZERO                 
+#         bin wdata_bin[84]                                   0          1          -    ZERO                 
+#         bin wdata_bin[85]                                   0          1          -    ZERO                 
+#         bin wdata_bin[86]                                   0          1          -    ZERO                 
+#         bin wdata_bin[87]                                   3          1          -    Covered              
+#         bin wdata_bin[88]                                   0          1          -    ZERO                 
+#         bin wdata_bin[89]                                   0          1          -    ZERO                 
+#         bin wdata_bin[90]                                   0          1          -    ZERO                 
+#         bin wdata_bin[91]                                   0          1          -    ZERO                 
+#         bin wdata_bin[92]                                   0          1          -    ZERO                 
+#         bin wdata_bin[93]                                   0          1          -    ZERO                 
+#         bin wdata_bin[94]                                   0          1          -    ZERO                 
+#         bin wdata_bin[95]                                   0          1          -    ZERO                 
+#         bin wdata_bin[96]                                   0          1          -    ZERO                 
+#         bin wdata_bin[97]                                   0          1          -    ZERO                 
+#         bin wdata_bin[98]                                   0          1          -    ZERO                 
+#         bin wdata_bin[99]                                   0          1          -    ZERO                 
+#         bin wdata_bin[100]                                  3          1          -    Covered              
+#         bin wdata_bin[101]                                  0          1          -    ZERO                 
+#         bin wdata_bin[102]                                  0          1          -    ZERO                 
+#         bin wdata_bin[103]                                  0          1          -    ZERO                 
+#         bin wdata_bin[104]                                  0          1          -    ZERO                 
+#         bin wdata_bin[105]                                  0          1          -    ZERO                 
+#         bin wdata_bin[106]                                  0          1          -    ZERO                 
+#         bin wdata_bin[107]                                  0          1          -    ZERO                 
+#         bin wdata_bin[108]                                  0          1          -    ZERO                 
+#         bin wdata_bin[109]                                  0          1          -    ZERO                 
+#         bin wdata_bin[110]                                  0          1          -    ZERO                 
+#         bin wdata_bin[111]                                  0          1          -    ZERO                 
+#         bin wdata_bin[112]                                  0          1          -    ZERO                 
+#         bin wdata_bin[113]                                  0          1          -    ZERO                 
+#         bin wdata_bin[114]                                  0          1          -    ZERO                 
+#         bin wdata_bin[115]                                  0          1          -    ZERO                 
+#         bin wdata_bin[116]                                  0          1          -    ZERO                 
+#         bin wdata_bin[117]                                  0          1          -    ZERO                 
+#         bin wdata_bin[118]                                  0          1          -    ZERO                 
+#         bin wdata_bin[119]                                  0          1          -    ZERO                 
+#         bin wdata_bin[120]                                  0          1          -    ZERO                 
+#         bin wdata_bin[121]                                  0          1          -    ZERO                 
+#         bin wdata_bin[122]                                  0          1          -    ZERO                 
+#         bin wdata_bin[123]                                  0          1          -    ZERO                 
+#         bin wdata_bin[124]                                  0          1          -    ZERO                 
+#         bin wdata_bin[125]                                  0          1          -    ZERO                 
+#         bin wdata_bin[126]                                  3          1          -    Covered              
+#         bin wdata_bin[127]                                  0          1          -    ZERO                 
+#         bin wdata_bin[128]                                  0          1          -    ZERO                 
+#         bin wdata_bin[129]                                  0          1          -    ZERO                 
+#         bin wdata_bin[130]                                  0          1          -    ZERO                 
+#         bin wdata_bin[131]                                  0          1          -    ZERO                 
+#         bin wdata_bin[132]                                  0          1          -    ZERO                 
+#         bin wdata_bin[133]                                  0          1          -    ZERO                 
+#         bin wdata_bin[134]                                  0          1          -    ZERO                 
+#         bin wdata_bin[135]                                  0          1          -    ZERO                 
+#         bin wdata_bin[136]                                  0          1          -    ZERO                 
+#         bin wdata_bin[137]                                  0          1          -    ZERO                 
+#         bin wdata_bin[138]                                  0          1          -    ZERO                 
+#         bin wdata_bin[139]                                  0          1          -    ZERO                 
+#         bin wdata_bin[140]                                  0          1          -    ZERO                 
+#         bin wdata_bin[141]                                  0          1          -    ZERO                 
+#         bin wdata_bin[142]                                  0          1          -    ZERO                 
+#         bin wdata_bin[143]                                  0          1          -    ZERO                 
+#         bin wdata_bin[144]                                  0          1          -    ZERO                 
+#         bin wdata_bin[145]                                  0          1          -    ZERO                 
+#         bin wdata_bin[146]                                  0          1          -    ZERO                 
+#         bin wdata_bin[147]                                  0          1          -    ZERO                 
+#         bin wdata_bin[148]                                  0          1          -    ZERO                 
+#         bin wdata_bin[149]                                  0          1          -    ZERO                 
+#         bin wdata_bin[150]                                  0          1          -    ZERO                 
+#         bin wdata_bin[151]                                  0          1          -    ZERO                 
+#         bin wdata_bin[152]                                  3          1          -    Covered              
+#         bin wdata_bin[153]                                  0          1          -    ZERO                 
+#         bin wdata_bin[154]                                  0          1          -    ZERO                 
+#         bin wdata_bin[155]                                  0          1          -    ZERO                 
+#         bin wdata_bin[156]                                  0          1          -    ZERO                 
+#         bin wdata_bin[157]                                  0          1          -    ZERO                 
+#         bin wdata_bin[158]                                  0          1          -    ZERO                 
+#         bin wdata_bin[159]                                  0          1          -    ZERO                 
+#         bin wdata_bin[160]                                  0          1          -    ZERO                 
+#         bin wdata_bin[161]                                  0          1          -    ZERO                 
+#         bin wdata_bin[162]                                  0          1          -    ZERO                 
+#         bin wdata_bin[163]                                  0          1          -    ZERO                 
+#         bin wdata_bin[164]                                  3          1          -    Covered              
+#         bin wdata_bin[165]                                  0          1          -    ZERO                 
+#         bin wdata_bin[166]                                  0          1          -    ZERO                 
+#         bin wdata_bin[167]                                  0          1          -    ZERO                 
+#         bin wdata_bin[168]                                  0          1          -    ZERO                 
+#         bin wdata_bin[169]                                  3          1          -    Covered              
+#         bin wdata_bin[170]                                  0          1          -    ZERO                 
+#         bin wdata_bin[171]                                  3          1          -    Covered              
+#         bin wdata_bin[172]                                  0          1          -    ZERO                 
+#         bin wdata_bin[173]                                  0          1          -    ZERO                 
+#         bin wdata_bin[174]                                  0          1          -    ZERO                 
+#         bin wdata_bin[175]                                  0          1          -    ZERO                 
+#         bin wdata_bin[176]                                  0          1          -    ZERO                 
+#         bin wdata_bin[177]                                  0          1          -    ZERO                 
+#         bin wdata_bin[178]                                  0          1          -    ZERO                 
+#         bin wdata_bin[179]                                  0          1          -    ZERO                 
+#         bin wdata_bin[180]                                  0          1          -    ZERO                 
+#         bin wdata_bin[181]                                  0          1          -    ZERO                 
+#         bin wdata_bin[182]                                  0          1          -    ZERO                 
+#         bin wdata_bin[183]                                  0          1          -    ZERO                 
+#         bin wdata_bin[184]                                  0          1          -    ZERO                 
+#         bin wdata_bin[185]                                  0          1          -    ZERO                 
+#         bin wdata_bin[186]                                  0          1          -    ZERO                 
+#         bin wdata_bin[187]                                  0          1          -    ZERO                 
+#         bin wdata_bin[188]                                  0          1          -    ZERO                 
+#         bin wdata_bin[189]                                  0          1          -    ZERO                 
+#         bin wdata_bin[190]                                  0          1          -    ZERO                 
+#         bin wdata_bin[191]                                  0          1          -    ZERO                 
+#         bin wdata_bin[192]                                  0          1          -    ZERO                 
+#         bin wdata_bin[193]                                  0          1          -    ZERO                 
+#         bin wdata_bin[194]                                  0          1          -    ZERO                 
+#         bin wdata_bin[195]                                  0          1          -    ZERO                 
+#         bin wdata_bin[196]                                  0          1          -    ZERO                 
+#         bin wdata_bin[197]                                  0          1          -    ZERO                 
+#         bin wdata_bin[198]                                  0          1          -    ZERO                 
+#         bin wdata_bin[199]                                  0          1          -    ZERO                 
+#         bin wdata_bin[200]                             680320          1          -    Covered              
+#         bin wdata_bin[201]                                  0          1          -    ZERO                 
+#         bin wdata_bin[202]                                  3          1          -    Covered              
+#         bin wdata_bin[203]                                  0          1          -    ZERO                 
+#         bin wdata_bin[204]                                  0          1          -    ZERO                 
+#         bin wdata_bin[205]                                  0          1          -    ZERO                 
+#         bin wdata_bin[206]                                  0          1          -    ZERO                 
+#         bin wdata_bin[207]                                  0          1          -    ZERO                 
+#         bin wdata_bin[208]                                  0          1          -    ZERO                 
+#         bin wdata_bin[209]                                  0          1          -    ZERO                 
+#         bin wdata_bin[210]                                  0          1          -    ZERO                 
+#         bin wdata_bin[211]                                  0          1          -    ZERO                 
+#         bin wdata_bin[212]                                  0          1          -    ZERO                 
+#         bin wdata_bin[213]                                  0          1          -    ZERO                 
+#         bin wdata_bin[214]                                  0          1          -    ZERO                 
+#         bin wdata_bin[215]                                  0          1          -    ZERO                 
+#         bin wdata_bin[216]                                  0          1          -    ZERO                 
+#         bin wdata_bin[217]                                  0          1          -    ZERO                 
+#         bin wdata_bin[218]                                  0          1          -    ZERO                 
+#         bin wdata_bin[219]                                  3          1          -    Covered              
+#         bin wdata_bin[220]                                  0          1          -    ZERO                 
+#         bin wdata_bin[221]                                  0          1          -    ZERO                 
+#         bin wdata_bin[222]                                  0          1          -    ZERO                 
+#         bin wdata_bin[223]                                  3          1          -    Covered              
+#         bin wdata_bin[224]                                  3          1          -    Covered              
+#         bin wdata_bin[225]                                  0          1          -    ZERO                 
+#         bin wdata_bin[226]                                  0          1          -    ZERO                 
+#         bin wdata_bin[227]                                  0          1          -    ZERO                 
+#         bin wdata_bin[228]                                  3          1          -    Covered              
+#         bin wdata_bin[229]                                  0          1          -    ZERO                 
+#         bin wdata_bin[230]                                  0          1          -    ZERO                 
+#         bin wdata_bin[231]                                  0          1          -    ZERO                 
+#         bin wdata_bin[232]                                  0          1          -    ZERO                 
+#         bin wdata_bin[233]                                  0          1          -    ZERO                 
+#         bin wdata_bin[234]                                  3          1          -    Covered              
+#         bin wdata_bin[235]                                  0          1          -    ZERO                 
+#         bin wdata_bin[236]                                  0          1          -    ZERO                 
+#         bin wdata_bin[237]                                  0          1          -    ZERO                 
+#         bin wdata_bin[238]                                  0          1          -    ZERO                 
+#         bin wdata_bin[239]                                  0          1          -    ZERO                 
+#         bin wdata_bin[240]                                  0          1          -    ZERO                 
+#         bin wdata_bin[241]                                  0          1          -    ZERO                 
+#         bin wdata_bin[242]                                  0          1          -    ZERO                 
+#         bin wdata_bin[243]                                  0          1          -    ZERO                 
+#         bin wdata_bin[244]                                  0          1          -    ZERO                 
+#         bin wdata_bin[245]                                  0          1          -    ZERO                 
+#         bin wdata_bin[246]                                  0          1          -    ZERO                 
+#         bin wdata_bin[247]                                  0          1          -    ZERO                 
+#         bin wdata_bin[248]                                  0          1          -    ZERO                 
+#         bin wdata_bin[249]                                  0          1          -    ZERO                 
+#         bin wdata_bin[250]                                  0          1          -    ZERO                 
+#         bin wdata_bin[251]                                  0          1          -    ZERO                 
+#         bin wdata_bin[252]                                  0          1          -    ZERO                 
+#         bin wdata_bin[253]                                  0          1          -    ZERO                 
+#         bin wdata_bin[254]                                  0          1          -    ZERO                 
+#         bin wdata_bin[255]                                  0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_bin[0]                                680342          1          -    Covered              
+#         bin rinc_bin[1]                                    40          1          -    Covered              
+#     Coverpoint #coverpoint__2#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_winc[0]                               680362          1          -    Covered              
+#         bin rinc_winc[1]                                   20          1          -    Covered              
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_wrst_n[0]                                  4          1          -    Covered              
+#         bin rinc_wrst_n[1]                             680378          1          -    Covered              
+#     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_rrst_n[0]                                  4          1          -    Covered              
+#         bin rinc_rrst_n[1]                             680378          1          -    Covered              
+#     Coverpoint #coverpoint__5#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin wfull_bin                                  680382          1          -    Covered              
+#     Coverpoint #coverpoint__6#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rempty_bin                                 680382          1          -    Covered              
+#     Coverpoint #coverpoint__7#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin rempty_bin                                      0          1          -    ZERO                 
+#     Coverpoint #coverpoint__8#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin rempty_bin                                      0          1          -    ZERO                 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                      14        14         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /async_fifo1_tb_uvm --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File testbench.sv
+#     68              1                          1     
+#     69              1                          1     
+#     72              1                          1     
+#     72              2                    1360766     
+#     72              3                    1360765     
+#     73              1                          1     
+#     73              2                     680383     
+#     73              3                     680383     
+#     78              1                          1     
+#     79              1                          1     
+#     83              1                          1     
+#     85              1                          1     
+#     85              2                     680382     
+#     86              1                     680382     
+# 
+# =================================================================================
+# === Instance: /testbench_sv_unit
+# === Design Unit: work.testbench_sv_unit
+# =================================================================================
+# 
+# Assertion Coverage:
+#     Assertions                       2         2         0   100.00%
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /testbench_sv_unit/generator/main/#anonblk#41483716#23#4#/#ublk#41483716#29/immed__31
+#                      generator.sv(31)                   0          1
+# /testbench_sv_unit/generator/main/#anonblk#41483716#39#4#/#ublk#41483716#44/immed__48
+#                      generator.sv(48)                   0          1
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                        22        17         5    77.27%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /testbench_sv_unit
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File generator.sv
+# ------------------------------------IF Branch------------------------------------
+#     29                                        60     Count coming in to IF
+#     29              1                         20     
+#                                               40     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     44                                        40     Count coming in to IF
+#     44              1                         20     
+#                                               20     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     50                                        40     Count coming in to IF
+#     50              1                    ***0***     
+#                                               40     All False Count
+# Branch totals: 1 hit of 2 branches = 50.00%
+# 
+# 
+#   File driver.sv
+# ------------------------------------IF Branch------------------------------------
+#     45                                        20     Count coming in to IF
+#     45              1                         20     
+#                                          ***0***     All False Count
+# Branch totals: 1 hit of 2 branches = 50.00%
+# 
+# 
+#   File monitor_in.sv
+# ------------------------------------IF Branch------------------------------------
+#     21                                    680378     Count coming in to IF
+#     21              1                         20     
+#                                           680358     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+#   File monitor_out.sv
+# ------------------------------------IF Branch------------------------------------
+#     21                                        40     Count coming in to IF
+#     21              1                         19     
+#                                               21     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+#   File scoreboard.sv
+# ------------------------------------IF Branch------------------------------------
+#     35                                       100     Count coming in to IF
+#     35              1                         20     
+#                                               80     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     41                                        20     Count coming in to IF
+#     41              1                    ***0***     
+#                                               20     All False Count
+# Branch totals: 1 hit of 2 branches = 50.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     59                                        40     Count coming in to IF
+#     59              1                         19     
+#                                               21     All False Count
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     67                                        19     Count coming in to IF
+#     67              1                         10     
+#     69              1                          9     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     89                                   ***0***     Count coming in to IF
+#     89              1                    ***0***     
+#                                          ***0***     All False Count
+# Branch totals: 0 hits of 2 branches = 0.00%
+# 
+# 
+# Condition Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Conditions                       7         5         2    71.42%
+# 
+# ================================Condition Details================================
+# 
+# Condition Coverage for instance /testbench_sv_unit --
+# 
+#   File generator.sv
+# ----------------Focused Condition View-------------------
+# Line       50 Item    1  (j == this.tx_cnt)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#           Input Term   Covered  Reason for no coverage   Hint
+#          -----------  --------  -----------------------  --------------
+#   (j == this.tx_cnt)         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (j == this.tx_cnt)_0  -                             
+#   Row   2:    ***0***  (j == this.tx_cnt)_1  -                             
+# 
+# 
+# 
+# 
+# ----------------Focused Condition View-------------------
+# Line       21 Item    1  (this.vif.r_inc && (this.i != 0))
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+# 
+# ----------------Focused Condition View-------------------
+# Line       41 Item    1  (tx.uniq_id == 1)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#          Input Term   Covered  Reason for no coverage   Hint
+#         -----------  --------  -----------------------  --------------
+#   (tx.uniq_id == 1)         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (tx.uniq_id == 1)_0   -                             
+#   Row   2:    ***0***  (tx.uniq_id == 1)_1   -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       59 Item    1  (this.vif.r_inc && (j != 0))
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+# ----------------Focused Condition View-------------------
+# Line       67 Item    1  (tx.r_data === this.verif_w_data)
+# Condition totals: 1 of 1 input term covered = 100.00%
+# 
+# 
+# 
+# Expression Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Expressions                      5         4         1    80.00%
+# 
+# ================================Expression Details================================
+# 
+# Expression Coverage for instance /testbench_sv_unit --
+# 
+#   File generator.sv
+# ----------------Focused Expression View-----------------
+# Line       27 Item    1  ((i % 3) == 0)
+# Expression totals: 1 of 1 input term covered = 100.00%
+# 
+# ----------------Focused Expression View-----------------
+# Line       43 Item    1  (((j % 2) == 0) || (this.tx_cnt == 0))
+# Expression totals: 1 of 2 input terms covered = 50.00%
+# 
+#           Input Term   Covered  Reason for no coverage   Hint
+#          -----------  --------  -----------------------  --------------
+#       ((j % 2) == 0)         Y
+#   (this.tx_cnt == 0)         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  ((j % 2) == 0)_0      ~(this.tx_cnt == 0)           
+#   Row   2:          1  ((j % 2) == 0)_1      -                             
+#   Row   3:          1  (this.tx_cnt == 0)_0  ~((j % 2) == 0)               
+#   Row   4:    ***0***  (this.tx_cnt == 0)_1  ~((j % 2) == 0)               
+# 
+# 
+# 
+# 
+# ----------------Focused Expression View-----------------
+# Line       20 Item    1  ((this.i % 2) == 0)
+# Expression totals: 1 of 1 input term covered = 100.00%
+# 
+# 
+# ----------------Focused Expression View-----------------
+# Line       58 Item    1  ((j % 2) == 0)
+# Expression totals: 1 of 1 input term covered = 100.00%
+# 
+# 
+# 
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                     142       116        26    81.69%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /testbench_sv_unit --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File transaction.sv
+#     16              1                    ***0***     
+#     16              1                    ***0***     
+#     17              1                    ***0***     
+#     17              1                    ***0***     
+#   File generator.sv
+#     13              1                          1     
+#     14              1                          1     
+#     19              1                          1     
+#     20              1                          1     
+#     23              1                          1     
+#     23              2                         60     
+#     24              1                         60     
+#     26              1                         60     
+#     27              1                         60     
+#     30              1                         20     
+#     32              1                         20     
+#     33              1                         20     
+#     34              1                         20     
+#     35              1                         20     
+#     39              1                          1     
+#     39              2                         40     
+#     42              1                         41     
+#     43              1                         40     
+#     45              1                         20     
+#     47              1                         20     
+#     51              1                    ***0***     
+#     56              1                    ***0***     
+#     57              1                    ***0***     
+#   File driver.sv
+#     2               1                          1     
+#     3               1                          1     
+#     9               1                          1     
+#     10              1                          1     
+#     15              1                          1     
+#     16              1                          1     
+#     17              1                          1     
+#     18              1                          1     
+#     19              1                          1     
+#     20              1                          1     
+#     21              1                          1     
+#     23              1                          5     
+#     23              2                          5     
+#     24              1                          1     
+#     25              1                          1     
+#     26              1                          1     
+#     27              1                          1     
+#     31              1                          1     
+#     33              1                          1     
+#     35              1                         21     
+#     37              1                         20     
+#     38              1                         20     
+#     39              1                         20     
+#     40              1                         20     
+#     41              1                         20     
+#     42              1                         20     
+#     43              1                         20     
+#     44              1                         20     
+#     45              1                         20     
+#     47              1                    ***0***     
+#   File monitor_in.sv
+#     6               1                          1     
+#     9               1                          1     
+#     10              1                          1     
+#     14              1                          1     
+#     16              1                          1     
+#     17              1                          1     
+#     19              1                     680379     
+#     23              1                         20     
+#     24              1                         20     
+#     25              1                         20     
+#     26              1                         20     
+#     29              1                    ***0***     
+#   File monitor_out.sv
+#     3               1                          1     
+#     6               1                          1     
+#     10              1                          1     
+#     11              1                          1     
+#     15              1                          1     
+#     16              1                          1     
+#     19              1                         41     
+#     20              1                         40     
+#     22              1                         19     
+#     23              1                         19     
+#     24              1                         19     
+#     26              1                         19     
+#     27              1                         19     
+#     29              1                         40     
+#     32              1                    ***0***     
+#   File scoreboard.sv
+#     13              1                          1     
+#     14              1                          1     
+#     15              1                          1     
+#     20              1                          1     
+#     21              1                          1     
+#     31              1                          1     
+#     31              2                        100     
+#     33              1                        100     
+#     36              1                         20     
+#     37              1                         20     
+#     40              1                         20     
+#     42              1                    ***0***     
+#     51              1                          1     
+#     52              1                          1     
+#     54              1                          1     
+#     54              2                         40     
+#     57              1                         41     
+#     58              1                         40     
+#     60              1                         19     
+#     61              1                         19     
+#     68              1                         10     
+#     70              1                          9     
+#     74              1                    ***0***     
+#     83              1                    ***0***     
+#     85              1                    ***0***     
+#     86              1                    ***0***     
+#     88              1                    ***0***     
+#     90              1                    ***0***     
+#     91              1                    ***0***     
+#     92              1                    ***0***     
+#     102             1                    ***0***     
+#   File env.sv
+#     22              1                          1     
+#     24              1                          1     
+#     25              1                          1     
+#     26              1                          1     
+#     28              1                          1     
+#     29              1                          1     
+#     30              1                          1     
+#     31              1                          1     
+#     32              1                          1     
+#     36              1                          1     
+#     41              1                          1     
+#     42              1                          1     
+#     43              1                          1     
+#     44              1                          1     
+#     45              1                          1     
+#     46              1                          1     
+#     52              1                          1     
+#     53              1                          1     
+#     54              1                    ***0***     
+#     55              1                    ***0***     
+#     57              1                    ***0***     
+#     58              1                    ***0***     
+#     62              1                          1     
+#     63              1                          1     
+#     64              1                          1     
+#     66              1                    ***0***     
+#     67              1                    ***0***     
+# 
+# COVERGROUP COVERAGE:
+# ----------------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric       Goal       Bins    Status               
+#                                                                                                          
+# ----------------------------------------------------------------------------------------------------------
+#  TYPE /async_fifo1_tb_uvm/fifo_coverage                67.57%        100          -    Uncovered            
+#     covered/total bins:                                    31        268          -                      
+#     missing/total bins:                                   237        268          -                      
+#     % Hit:                                             11.56%        100          -                      
+#     Coverpoint #coverpoint__0#                          8.20%        100          -    Uncovered            
+#         covered/total bins:                                21        256          -                      
+#         missing/total bins:                               235        256          -                      
+#         % Hit:                                          8.20%        100          -                      
+#     Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__2#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__5#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__6#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint #coverpoint__7#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#     Coverpoint #coverpoint__8#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#  Covergroup instance \/async_fifo1_tb_uvm/#ublk#98876365#81/fifo_cov  
+#                                                        67.57%        100          -    Uncovered            
+#     covered/total bins:                                    31        268          -                      
+#     missing/total bins:                                   237        268          -                      
+#     % Hit:                                             11.56%        100          -                      
+#     Coverpoint #coverpoint__0#                          8.20%        100          -    Uncovered            
+#         covered/total bins:                                21        256          -                      
+#         missing/total bins:                               235        256          -                      
+#         % Hit:                                          8.20%        100          -                      
+#         bin wdata_bin[0]                                    5          1          -    Covered              
+#         bin wdata_bin[1]                                    0          1          -    ZERO                 
+#         bin wdata_bin[2]                                    0          1          -    ZERO                 
+#         bin wdata_bin[3]                                    0          1          -    ZERO                 
+#         bin wdata_bin[4]                                    0          1          -    ZERO                 
+#         bin wdata_bin[5]                                    0          1          -    ZERO                 
+#         bin wdata_bin[6]                                    0          1          -    ZERO                 
+#         bin wdata_bin[7]                                    0          1          -    ZERO                 
+#         bin wdata_bin[8]                                    0          1          -    ZERO                 
+#         bin wdata_bin[9]                                    0          1          -    ZERO                 
+#         bin wdata_bin[10]                                   0          1          -    ZERO                 
+#         bin wdata_bin[11]                                   0          1          -    ZERO                 
+#         bin wdata_bin[12]                                   0          1          -    ZERO                 
+#         bin wdata_bin[13]                                   0          1          -    ZERO                 
+#         bin wdata_bin[14]                                   0          1          -    ZERO                 
+#         bin wdata_bin[15]                                   0          1          -    ZERO                 
+#         bin wdata_bin[16]                                   0          1          -    ZERO                 
+#         bin wdata_bin[17]                                   0          1          -    ZERO                 
+#         bin wdata_bin[18]                                   0          1          -    ZERO                 
+#         bin wdata_bin[19]                                   0          1          -    ZERO                 
+#         bin wdata_bin[20]                                   3          1          -    Covered              
+#         bin wdata_bin[21]                                   0          1          -    ZERO                 
+#         bin wdata_bin[22]                                   0          1          -    ZERO                 
+#         bin wdata_bin[23]                                   0          1          -    ZERO                 
+#         bin wdata_bin[24]                                   3          1          -    Covered              
+#         bin wdata_bin[25]                                   0          1          -    ZERO                 
+#         bin wdata_bin[26]                                   0          1          -    ZERO                 
+#         bin wdata_bin[27]                                   0          1          -    ZERO                 
+#         bin wdata_bin[28]                                   0          1          -    ZERO                 
+#         bin wdata_bin[29]                                   0          1          -    ZERO                 
+#         bin wdata_bin[30]                                   0          1          -    ZERO                 
+#         bin wdata_bin[31]                                   3          1          -    Covered              
+#         bin wdata_bin[32]                                   0          1          -    ZERO                 
+#         bin wdata_bin[33]                                   0          1          -    ZERO                 
+#         bin wdata_bin[34]                                   0          1          -    ZERO                 
+#         bin wdata_bin[35]                                   0          1          -    ZERO                 
+#         bin wdata_bin[36]                                   0          1          -    ZERO                 
+#         bin wdata_bin[37]                                   0          1          -    ZERO                 
+#         bin wdata_bin[38]                                   0          1          -    ZERO                 
+#         bin wdata_bin[39]                                   0          1          -    ZERO                 
+#         bin wdata_bin[40]                                   0          1          -    ZERO                 
+#         bin wdata_bin[41]                                   0          1          -    ZERO                 
+#         bin wdata_bin[42]                                   0          1          -    ZERO                 
+#         bin wdata_bin[43]                                   0          1          -    ZERO                 
+#         bin wdata_bin[44]                                   0          1          -    ZERO                 
+#         bin wdata_bin[45]                                   0          1          -    ZERO                 
+#         bin wdata_bin[46]                                   0          1          -    ZERO                 
+#         bin wdata_bin[47]                                   0          1          -    ZERO                 
+#         bin wdata_bin[48]                                   3          1          -    Covered              
+#         bin wdata_bin[49]                                   0          1          -    ZERO                 
+#         bin wdata_bin[50]                                   0          1          -    ZERO                 
+#         bin wdata_bin[51]                                   0          1          -    ZERO                 
+#         bin wdata_bin[52]                                   0          1          -    ZERO                 
+#         bin wdata_bin[53]                                   0          1          -    ZERO                 
+#         bin wdata_bin[54]                                   0          1          -    ZERO                 
+#         bin wdata_bin[55]                                   0          1          -    ZERO                 
+#         bin wdata_bin[56]                                   0          1          -    ZERO                 
+#         bin wdata_bin[57]                                   0          1          -    ZERO                 
+#         bin wdata_bin[58]                                   3          1          -    Covered              
+#         bin wdata_bin[59]                                   0          1          -    ZERO                 
+#         bin wdata_bin[60]                                   0          1          -    ZERO                 
+#         bin wdata_bin[61]                                   0          1          -    ZERO                 
+#         bin wdata_bin[62]                                   0          1          -    ZERO                 
+#         bin wdata_bin[63]                                   3          1          -    Covered              
+#         bin wdata_bin[64]                                   0          1          -    ZERO                 
+#         bin wdata_bin[65]                                   0          1          -    ZERO                 
+#         bin wdata_bin[66]                                   0          1          -    ZERO                 
+#         bin wdata_bin[67]                                   0          1          -    ZERO                 
+#         bin wdata_bin[68]                                   0          1          -    ZERO                 
+#         bin wdata_bin[69]                                   0          1          -    ZERO                 
+#         bin wdata_bin[70]                                   0          1          -    ZERO                 
+#         bin wdata_bin[71]                                   0          1          -    ZERO                 
+#         bin wdata_bin[72]                                   0          1          -    ZERO                 
+#         bin wdata_bin[73]                                   0          1          -    ZERO                 
+#         bin wdata_bin[74]                                   0          1          -    ZERO                 
+#         bin wdata_bin[75]                                   0          1          -    ZERO                 
+#         bin wdata_bin[76]                                   0          1          -    ZERO                 
+#         bin wdata_bin[77]                                   0          1          -    ZERO                 
+#         bin wdata_bin[78]                                   0          1          -    ZERO                 
+#         bin wdata_bin[79]                                   0          1          -    ZERO                 
+#         bin wdata_bin[80]                                   0          1          -    ZERO                 
+#         bin wdata_bin[81]                                   0          1          -    ZERO                 
+#         bin wdata_bin[82]                                   0          1          -    ZERO                 
+#         bin wdata_bin[83]                                   0          1          -    ZERO                 
+#         bin wdata_bin[84]                                   0          1          -    ZERO                 
+#         bin wdata_bin[85]                                   0          1          -    ZERO                 
+#         bin wdata_bin[86]                                   0          1          -    ZERO                 
+#         bin wdata_bin[87]                                   3          1          -    Covered              
+#         bin wdata_bin[88]                                   0          1          -    ZERO                 
+#         bin wdata_bin[89]                                   0          1          -    ZERO                 
+#         bin wdata_bin[90]                                   0          1          -    ZERO                 
+#         bin wdata_bin[91]                                   0          1          -    ZERO                 
+#         bin wdata_bin[92]                                   0          1          -    ZERO                 
+#         bin wdata_bin[93]                                   0          1          -    ZERO                 
+#         bin wdata_bin[94]                                   0          1          -    ZERO                 
+#         bin wdata_bin[95]                                   0          1          -    ZERO                 
+#         bin wdata_bin[96]                                   0          1          -    ZERO                 
+#         bin wdata_bin[97]                                   0          1          -    ZERO                 
+#         bin wdata_bin[98]                                   0          1          -    ZERO                 
+#         bin wdata_bin[99]                                   0          1          -    ZERO                 
+#         bin wdata_bin[100]                                  3          1          -    Covered              
+#         bin wdata_bin[101]                                  0          1          -    ZERO                 
+#         bin wdata_bin[102]                                  0          1          -    ZERO                 
+#         bin wdata_bin[103]                                  0          1          -    ZERO                 
+#         bin wdata_bin[104]                                  0          1          -    ZERO                 
+#         bin wdata_bin[105]                                  0          1          -    ZERO                 
+#         bin wdata_bin[106]                                  0          1          -    ZERO                 
+#         bin wdata_bin[107]                                  0          1          -    ZERO                 
+#         bin wdata_bin[108]                                  0          1          -    ZERO                 
+#         bin wdata_bin[109]                                  0          1          -    ZERO                 
+#         bin wdata_bin[110]                                  0          1          -    ZERO                 
+#         bin wdata_bin[111]                                  0          1          -    ZERO                 
+#         bin wdata_bin[112]                                  0          1          -    ZERO                 
+#         bin wdata_bin[113]                                  0          1          -    ZERO                 
+#         bin wdata_bin[114]                                  0          1          -    ZERO                 
+#         bin wdata_bin[115]                                  0          1          -    ZERO                 
+#         bin wdata_bin[116]                                  0          1          -    ZERO                 
+#         bin wdata_bin[117]                                  0          1          -    ZERO                 
+#         bin wdata_bin[118]                                  0          1          -    ZERO                 
+#         bin wdata_bin[119]                                  0          1          -    ZERO                 
+#         bin wdata_bin[120]                                  0          1          -    ZERO                 
+#         bin wdata_bin[121]                                  0          1          -    ZERO                 
+#         bin wdata_bin[122]                                  0          1          -    ZERO                 
+#         bin wdata_bin[123]                                  0          1          -    ZERO                 
+#         bin wdata_bin[124]                                  0          1          -    ZERO                 
+#         bin wdata_bin[125]                                  0          1          -    ZERO                 
+#         bin wdata_bin[126]                                  3          1          -    Covered              
+#         bin wdata_bin[127]                                  0          1          -    ZERO                 
+#         bin wdata_bin[128]                                  0          1          -    ZERO                 
+#         bin wdata_bin[129]                                  0          1          -    ZERO                 
+#         bin wdata_bin[130]                                  0          1          -    ZERO                 
+#         bin wdata_bin[131]                                  0          1          -    ZERO                 
+#         bin wdata_bin[132]                                  0          1          -    ZERO                 
+#         bin wdata_bin[133]                                  0          1          -    ZERO                 
+#         bin wdata_bin[134]                                  0          1          -    ZERO                 
+#         bin wdata_bin[135]                                  0          1          -    ZERO                 
+#         bin wdata_bin[136]                                  0          1          -    ZERO                 
+#         bin wdata_bin[137]                                  0          1          -    ZERO                 
+#         bin wdata_bin[138]                                  0          1          -    ZERO                 
+#         bin wdata_bin[139]                                  0          1          -    ZERO                 
+#         bin wdata_bin[140]                                  0          1          -    ZERO                 
+#         bin wdata_bin[141]                                  0          1          -    ZERO                 
+#         bin wdata_bin[142]                                  0          1          -    ZERO                 
+#         bin wdata_bin[143]                                  0          1          -    ZERO                 
+#         bin wdata_bin[144]                                  0          1          -    ZERO                 
+#         bin wdata_bin[145]                                  0          1          -    ZERO                 
+#         bin wdata_bin[146]                                  0          1          -    ZERO                 
+#         bin wdata_bin[147]                                  0          1          -    ZERO                 
+#         bin wdata_bin[148]                                  0          1          -    ZERO                 
+#         bin wdata_bin[149]                                  0          1          -    ZERO                 
+#         bin wdata_bin[150]                                  0          1          -    ZERO                 
+#         bin wdata_bin[151]                                  0          1          -    ZERO                 
+#         bin wdata_bin[152]                                  3          1          -    Covered              
+#         bin wdata_bin[153]                                  0          1          -    ZERO                 
+#         bin wdata_bin[154]                                  0          1          -    ZERO                 
+#         bin wdata_bin[155]                                  0          1          -    ZERO                 
+#         bin wdata_bin[156]                                  0          1          -    ZERO                 
+#         bin wdata_bin[157]                                  0          1          -    ZERO                 
+#         bin wdata_bin[158]                                  0          1          -    ZERO                 
+#         bin wdata_bin[159]                                  0          1          -    ZERO                 
+#         bin wdata_bin[160]                                  0          1          -    ZERO                 
+#         bin wdata_bin[161]                                  0          1          -    ZERO                 
+#         bin wdata_bin[162]                                  0          1          -    ZERO                 
+#         bin wdata_bin[163]                                  0          1          -    ZERO                 
+#         bin wdata_bin[164]                                  3          1          -    Covered              
+#         bin wdata_bin[165]                                  0          1          -    ZERO                 
+#         bin wdata_bin[166]                                  0          1          -    ZERO                 
+#         bin wdata_bin[167]                                  0          1          -    ZERO                 
+#         bin wdata_bin[168]                                  0          1          -    ZERO                 
+#         bin wdata_bin[169]                                  3          1          -    Covered              
+#         bin wdata_bin[170]                                  0          1          -    ZERO                 
+#         bin wdata_bin[171]                                  3          1          -    Covered              
+#         bin wdata_bin[172]                                  0          1          -    ZERO                 
+#         bin wdata_bin[173]                                  0          1          -    ZERO                 
+#         bin wdata_bin[174]                                  0          1          -    ZERO                 
+#         bin wdata_bin[175]                                  0          1          -    ZERO                 
+#         bin wdata_bin[176]                                  0          1          -    ZERO                 
+#         bin wdata_bin[177]                                  0          1          -    ZERO                 
+#         bin wdata_bin[178]                                  0          1          -    ZERO                 
+#         bin wdata_bin[179]                                  0          1          -    ZERO                 
+#         bin wdata_bin[180]                                  0          1          -    ZERO                 
+#         bin wdata_bin[181]                                  0          1          -    ZERO                 
+#         bin wdata_bin[182]                                  0          1          -    ZERO                 
+#         bin wdata_bin[183]                                  0          1          -    ZERO                 
+#         bin wdata_bin[184]                                  0          1          -    ZERO                 
+#         bin wdata_bin[185]                                  0          1          -    ZERO                 
+#         bin wdata_bin[186]                                  0          1          -    ZERO                 
+#         bin wdata_bin[187]                                  0          1          -    ZERO                 
+#         bin wdata_bin[188]                                  0          1          -    ZERO                 
+#         bin wdata_bin[189]                                  0          1          -    ZERO                 
+#         bin wdata_bin[190]                                  0          1          -    ZERO                 
+#         bin wdata_bin[191]                                  0          1          -    ZERO                 
+#         bin wdata_bin[192]                                  0          1          -    ZERO                 
+#         bin wdata_bin[193]                                  0          1          -    ZERO                 
+#         bin wdata_bin[194]                                  0          1          -    ZERO                 
+#         bin wdata_bin[195]                                  0          1          -    ZERO                 
+#         bin wdata_bin[196]                                  0          1          -    ZERO                 
+#         bin wdata_bin[197]                                  0          1          -    ZERO                 
+#         bin wdata_bin[198]                                  0          1          -    ZERO                 
+#         bin wdata_bin[199]                                  0          1          -    ZERO                 
+#         bin wdata_bin[200]                             680320          1          -    Covered              
+#         bin wdata_bin[201]                                  0          1          -    ZERO                 
+#         bin wdata_bin[202]                                  3          1          -    Covered              
+#         bin wdata_bin[203]                                  0          1          -    ZERO                 
+#         bin wdata_bin[204]                                  0          1          -    ZERO                 
+#         bin wdata_bin[205]                                  0          1          -    ZERO                 
+#         bin wdata_bin[206]                                  0          1          -    ZERO                 
+#         bin wdata_bin[207]                                  0          1          -    ZERO                 
+#         bin wdata_bin[208]                                  0          1          -    ZERO                 
+#         bin wdata_bin[209]                                  0          1          -    ZERO                 
+#         bin wdata_bin[210]                                  0          1          -    ZERO                 
+#         bin wdata_bin[211]                                  0          1          -    ZERO                 
+#         bin wdata_bin[212]                                  0          1          -    ZERO                 
+#         bin wdata_bin[213]                                  0          1          -    ZERO                 
+#         bin wdata_bin[214]                                  0          1          -    ZERO                 
+#         bin wdata_bin[215]                                  0          1          -    ZERO                 
+#         bin wdata_bin[216]                                  0          1          -    ZERO                 
+#         bin wdata_bin[217]                                  0          1          -    ZERO                 
+#         bin wdata_bin[218]                                  0          1          -    ZERO                 
+#         bin wdata_bin[219]                                  3          1          -    Covered              
+#         bin wdata_bin[220]                                  0          1          -    ZERO                 
+#         bin wdata_bin[221]                                  0          1          -    ZERO                 
+#         bin wdata_bin[222]                                  0          1          -    ZERO                 
+#         bin wdata_bin[223]                                  3          1          -    Covered              
+#         bin wdata_bin[224]                                  3          1          -    Covered              
+#         bin wdata_bin[225]                                  0          1          -    ZERO                 
+#         bin wdata_bin[226]                                  0          1          -    ZERO                 
+#         bin wdata_bin[227]                                  0          1          -    ZERO                 
+#         bin wdata_bin[228]                                  3          1          -    Covered              
+#         bin wdata_bin[229]                                  0          1          -    ZERO                 
+#         bin wdata_bin[230]                                  0          1          -    ZERO                 
+#         bin wdata_bin[231]                                  0          1          -    ZERO                 
+#         bin wdata_bin[232]                                  0          1          -    ZERO                 
+#         bin wdata_bin[233]                                  0          1          -    ZERO                 
+#         bin wdata_bin[234]                                  3          1          -    Covered              
+#         bin wdata_bin[235]                                  0          1          -    ZERO                 
+#         bin wdata_bin[236]                                  0          1          -    ZERO                 
+#         bin wdata_bin[237]                                  0          1          -    ZERO                 
+#         bin wdata_bin[238]                                  0          1          -    ZERO                 
+#         bin wdata_bin[239]                                  0          1          -    ZERO                 
+#         bin wdata_bin[240]                                  0          1          -    ZERO                 
+#         bin wdata_bin[241]                                  0          1          -    ZERO                 
+#         bin wdata_bin[242]                                  0          1          -    ZERO                 
+#         bin wdata_bin[243]                                  0          1          -    ZERO                 
+#         bin wdata_bin[244]                                  0          1          -    ZERO                 
+#         bin wdata_bin[245]                                  0          1          -    ZERO                 
+#         bin wdata_bin[246]                                  0          1          -    ZERO                 
+#         bin wdata_bin[247]                                  0          1          -    ZERO                 
+#         bin wdata_bin[248]                                  0          1          -    ZERO                 
+#         bin wdata_bin[249]                                  0          1          -    ZERO                 
+#         bin wdata_bin[250]                                  0          1          -    ZERO                 
+#         bin wdata_bin[251]                                  0          1          -    ZERO                 
+#         bin wdata_bin[252]                                  0          1          -    ZERO                 
+#         bin wdata_bin[253]                                  0          1          -    ZERO                 
+#         bin wdata_bin[254]                                  0          1          -    ZERO                 
+#         bin wdata_bin[255]                                  0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_bin[0]                                680342          1          -    Covered              
+#         bin rinc_bin[1]                                    40          1          -    Covered              
+#     Coverpoint #coverpoint__2#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_winc[0]                               680362          1          -    Covered              
+#         bin rinc_winc[1]                                   20          1          -    Covered              
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_wrst_n[0]                                  4          1          -    Covered              
+#         bin rinc_wrst_n[1]                             680378          1          -    Covered              
+#     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rinc_rrst_n[0]                                  4          1          -    Covered              
+#         bin rinc_rrst_n[1]                             680378          1          -    Covered              
+#     Coverpoint #coverpoint__5#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin wfull_bin                                  680382          1          -    Covered              
+#     Coverpoint #coverpoint__6#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin rempty_bin                                 680382          1          -    Covered              
+#     Coverpoint #coverpoint__7#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin rempty_bin                                      0          1          -    ZERO                 
+#     Coverpoint #coverpoint__8#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin rempty_bin                                      0          1          -    ZERO                 
+# 
+# TOTAL COVERGROUP COVERAGE: 67.57%  COVERGROUP TYPES: 1
+# 
+# ASSERTION RESULTS:
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /testbench_sv_unit/generator/main/#anonblk#41483716#23#4#/#ublk#41483716#29/immed__31
+#                      generator.sv(31)                   0          1
+# /testbench_sv_unit/generator/main/#anonblk#41483716#39#4#/#ublk#41483716#44/immed__48
+#                      generator.sv(48)                   0          1
+# 
+# Total Coverage By Instance (filtered view): 74.02%
+# 
+# 
+
+
